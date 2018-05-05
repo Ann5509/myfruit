@@ -20,46 +20,11 @@
     <div class="main-con">
       <a href="javascript:void(0)" class="circle dis-flex"><p class="link-text" onclick="setFruitBlock()">幫我配</p></a>
 
-      <!-- nutrient-block 
-      <div class="nutrient-block">
-
-        <div class="input-form clearfix">
-          <ul class="input-selected">
-            <li class="selected-item">運動 <button>X</button></li>
-            <li class="selected-item">消化 <button>X</button></li>
-            <li class="selected-item">維生素 <button>X</button></li>
-            <li class="selected-item">運動 <button>X</button></li>
-            <li class="selected-item">消化 <button>X</button></li>
-            <li class="selected-item">維生素 <button>X</button></li>
-          </ul>
-          <button class="input-add">＋</button>
-        </div>
-
-      </div>
-      <!-- / nutrient-block -->
-
-
       <!-- result-block -->
       <div class="result-block">
         <div class="result-area"></div>
         
-        <div class="result-toggle"><!-- 
-          <div class="result-more">
-            <p class="result-more-title">草莓</p>
-            <div class="result-more-content">
-              <p style="margin-bottom: 5px;">富含可溶性膳食纖維，對解除便秘有療效。</p>
-              <span class="result-more-tag">維生素A</span>
-              <span class="result-more-tag">維生素B</span>
-            </div>
-          </div>
-          <div class="result-more">
-            <p class="result-more-title">草莓</p>
-            <div class="result-more-content">
-              <p style="margin-bottom: 5px;">富含可溶性膳食纖維，對解除便秘有療效。</p>
-              <span class="result-more-tag">維生素A</span>
-              <span class="result-more-tag">維生素B</span>
-            </div>
-          </div> -->
+        <div class="result-toggle">
         </div>
 
         <button class="readmore">展開更多說明</button>
@@ -74,16 +39,16 @@
         <div class="chart clearfix">
           <div class="chart-img">
             <div id="myChart"></div>
-            <span id="kcal">106</span>
+            <span id="kcal"></span>
           </div>
           <!-- chart -->
           <div class="chart-value">
             <ul>
-              <li class="protein">蛋白質<span class="nutrient-con">21</span></li>
-              <li class="carbohydrates">碳水化合物<span class="nutrient-con">21</span></li>
-              <li class="fat">脂肪<span class="nutrient-con">21</span></li>
-              <li class="dietaryFiber">膳食纖維<span class="nutrient-con">21</span></li>
-              <li class="sugar">糖份<span class="nutrient-con">21</span></li>
+              <li class="protein">蛋白質<span class="nutrient-con"></span></li>
+              <li class="carbohydrates">碳水化合物<span class="nutrient-con"></span></li>
+              <li class="fat">脂肪<span class="nutrient-con"></span></li>
+              <li class="dietaryFiber">膳食纖維<span class="nutrient-con"></span></li>
+              <li class="sugar">糖份<span class="nutrient-con"></span></li>
             </ul>
           </div>
           <!-- chart -->
@@ -157,7 +122,6 @@
       var fruitValues = Object.values(fruitData);
       uniqueNum = getRandomNum(fruitKeys.length, 0 , 3);
       var fruitString = '' ;
-      var fruitToggleString = '';
       var fruitSeason = [];
       var chartTags = [];
       var chartTagsArr = [];
@@ -176,7 +140,6 @@
         };
 
         fruitString += setFruitString( fruitInfo );
-        fruitToggleString += setToggleString(fruitInfo);
 
         chartTags.push(fruitInfo.nutrients);
 
@@ -195,7 +158,6 @@
       }
 
       $('.result-area').html(fruitString);
-      $('.result-toggle').html(fruitToggleString);
       $('.chart-tags').html(getNutrientTags(setUniqueValue(chartTagsArr),'chart'));
 
     };
@@ -263,29 +225,11 @@
       </div>\
       <div class="result-info">\
       <h4 class="fruitname ' + data.season + '">' + data.zhName + '</h4>\
-      </div>\
-      </div>';
-    };
-
-
-    // == 水果Toggle string 
-    function setToggleString(data){
-      return '<div class="result-more">\
-      <div class="result-img result-more-title">\
-      <div class="square img-fit" style="background-image: url(images/fruit/'+ data.enName +'.jpg);"></div>\
-      <div class="addnums">\
-      <a href="javascript:void(0)" class="minus"></a>\
-      <input id="numCount" class="numCount" type="text" maxlength="2" value="' + data.num + '"/>\
-      <a href="javascript:void(0)" class="plus"></a>\
-      </div>\
-      </div>\
-      <div class="result-more-content">\
-      <h4 class="fruitname ' + data.season + '">' + data.zhName + '</h4>\
       <p style="margin-bottom: 5px;">' + data.info + '</p>\
       <ul>' + getNutrientTags(data.nutrients,'block') + '</ul>\
       </div>\
       </div>';
-    }
+    };
 
 
     // == 水果營養素tag string 
@@ -403,9 +347,7 @@
 
     // Toggle Block
     $(document).on('click', '.readmore' , function(){
-      $(this).toggleClass('active')
-      $('.result-toggle').slideToggle();
-      $('.result-area').slideToggle();
+      $('.result-area').toggleClass('moreinfo');
     });
 
 

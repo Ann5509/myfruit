@@ -59,7 +59,7 @@ p {
 .dis-flex {
   display: flex; }
 
-.box-shadow, .main-con .circle, .nutrient-block, .input-add, .input-selected .selected-item, .result-block, .result-img, .result-toggle, .chart-block {
+.box-shadow, .main-con .circle, .nutrient-block, .input-add, .input-selected .selected-item, .result-block, .result-img, .moreinfo, .chart-block {
   box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.5); }
 
 .clearfix:before,
@@ -247,6 +247,8 @@ p {
 
 .result-info {
   position: relative; }
+  .result-info > :not(h4) {
+    display: none; }
 
 .fruitname {
   text-align: center;
@@ -267,15 +269,38 @@ p {
     color: #fff;
     border-radius: 5px; }
 
-.result-toggle {
-  display: none;
-  padding: 25px;
+.moreinfo {
+  display: block;
+  padding: 23px;
   padding-bottom: 5px; }
+  .moreinfo .result-item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px; }
+  .moreinfo .result-img {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    color: #545454;
+    font-weight: bold; }
+  .moreinfo .fruitname {
+    text-align: left;
+    margin-top: 0px;
+    padding-top: 0px; }
+  .moreinfo .result-info {
+    width: calc(100% - 90px);
+    height: fit-content;
+    text-align: left;
+    font-weight: initial;
+    padding-left: 13px;
+    padding-top: 5px; }
+    .moreinfo .result-info > :not(h4) {
+      display: block; }
 
 .result-more {
   width: 100%;
   display: flex;
-  margin-bottom: 25px; }
+  margin-bottom: 15px; }
 
 .result-more-title, .result-more-content {
   width: 90px;
