@@ -1,0 +1,425 @@
+@charset "UTF-8";
+.btn-black {
+  background: rgba(210, 210, 210, 0.32);
+  color: #000;
+  border: 1px solid rgba(146, 146, 146, 0.32); }
+  .btn-black:hover {
+    background: rgba(146, 146, 146, 0.32);
+    color: #000;
+    transition: 0.3s; }
+
+.btn-white {
+  background: #fff;
+  color: #000;
+  border: 1px solid #bfbfbf; }
+  .btn-white:hover {
+    background: #bfbfbf;
+    color: #000;
+    transition: 0.3s; }
+
+.btn-main {
+  background: #e6a958;
+  color: #000;
+  border: 1px solid #a66919; }
+  .btn-main:hover {
+    background: #a66919;
+    color: #000;
+    transition: 0.3s; }
+
+input {
+  width: 100%;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 5px 10px; }
+
+p {
+  text-align: justify;
+  text-justify: inter-word; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.img-fit {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; }
+
+.dis-flex {
+  display: flex; }
+
+.box-shadow, .main-con .circle, .nutrient-block, .input-add, .input-selected .selected-item, .result-block, .result-img, .result-toggle, .chart-block {
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.5); }
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1;
+  /*For IE 6&7 only*/ }
+
+*::selection {
+  color: #fff;
+  background: #000; }
+
+*::-moz-selection {
+  /*Only Firefox still needs a prefix*/
+  color: #fff;
+  background: #000; }
+
+.top-menu {
+  position: relative;
+  height: 50px; }
+
+.back-arrow {
+  position: absolute;
+  outline: 0;
+  top: 15px;
+  left: 15px;
+  width: 17px;
+  height: 17px;
+  border: 0;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  background-color: transparent;
+  transform: rotate(45deg); }
+
+.bottom-menu {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7); }
+
+.main-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url("../images/banner/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .main-banner.banner-01 {
+    background-image: url("../images/banner/banner-01.jpg"); }
+
+.header-title {
+  position: relative;
+  padding: 100px 0 80px;
+  color: white;
+  font-size: 36px;
+  text-shadow: 4px 1px 8px black; }
+
+.main-con {
+  padding: 20px; }
+  .main-con .circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.63);
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: -40px auto 30px;
+    color: white;
+    font-size: 24px;
+    text-shadow: 4px 1px 8px black; }
+    .main-con .circle.active {
+      background-color: #d64b4b78;
+      border-color: #ce3a3a9e; }
+
+.link-text {
+  margin: auto; }
+
+.input-form {
+  margin-bottom: 20px; }
+
+.input-add {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.63);
+  background-color: #5db5a3;
+  color: #fff;
+  float: right; }
+
+.input-selected {
+  width: 80%;
+  float: left; }
+  .input-selected .selected-item {
+    display: inline-block;
+    padding: 3px 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color: #3C989E;
+    color: white;
+    border-radius: 3px; }
+
+.result-block {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  min-height: 130px;
+  overflow: hidden;
+  padding: 0; }
+  .result-block .square {
+    box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.12);
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.63); }
+
+.result-area {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.7);
+  padding: 15px;
+  box-shadow: 1px 2px 13px 0px rgba(0, 0, 0, 0.16); }
+
+.readmore {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid rgba(204, 204, 204, 0.4);
+  padding: 10px 0;
+  font-size: 14px;
+  color: #545454;
+  background-color: #e8e8e8; }
+  .readmore:before {
+    content: ''; }
+
+.addnums {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 45px);
+  background: rgba(255, 255, 255, 0.8); }
+
+.minus, .plus {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  height: 36px; }
+  .minus:before, .plus:before {
+    content: '-';
+    position: relative;
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px; }
+
+.plus:before {
+  content: '+'; }
+
+.numCount {
+  width: 35px;
+  border: 0;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  background: transparent; }
+
+.result-item {
+  animation: moveFruitBlock linear 0.3s;
+  animation-iteration-count: 1; }
+  .result-item:last-child {
+    margin-bottom: 0px; }
+
+.result-img {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden; }
+
+.result-info {
+  position: relative; }
+
+.fruitname {
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 5px;
+  font-weight: bold;
+  color: #F57A82; }
+  .result-more .fruitname {
+    text-align: left;
+    margin-top: 0px;
+    padding-top: 0px; }
+  .fruitname.season:before {
+    content: '盛';
+    position: relative;
+    padding: 1px 3px;
+    margin-right: 3px;
+    background-color: #ED5276;
+    color: #fff;
+    border-radius: 5px; }
+
+.result-toggle {
+  display: none;
+  padding: 25px;
+  padding-bottom: 5px; }
+
+.result-more {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px; }
+
+.result-more-title, .result-more-content {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  color: #545454;
+  font-weight: bold; }
+
+.result-more-content {
+  width: calc(100% - 90px);
+  height: fit-content;
+  text-align: left;
+  font-weight: initial;
+  padding-left: 13px;
+  padding-top: 5px; }
+
+.tags {
+  display: inline-block;
+  padding: 1px 3px;
+  border-radius: 5px;
+  font-size: 10px;
+  margin-right: 3px;
+  width: 58px;
+  text-align: center; }
+
+.chart-tags {
+  margin-bottom: 10px; }
+
+.result-more-tag {
+  background: #5DB5A4;
+  color: #fff; }
+
+.quantity {
+  float: right; }
+
+.season-tag {
+  position: relative; }
+
+.fav-tag {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  margin: 1px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+
+.content-style, .nutrient-block, .result-block, .chart-block {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.83); }
+
+.chart-block {
+  display: block;
+  align-items: center;
+  padding: 15px; }
+
+.chart-block-title {
+  font-size: 14px;
+  color: #545454;
+  margin-bottom: 10px; }
+
+.chart {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  animation: moveFruitBlock linear 0.5s;
+  animation-iteration-count: 1; }
+
+.chart-img {
+  width: 50%;
+  float: left;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; }
+
+.chart-table {
+  width: 60%;
+  margin: 10px auto; }
+  .chart-table .n-value {
+    float: right; }
+
+#myChart {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  background: conic-gradient(#5DB5A4 0 30%, #F4CDA5 30% 60%, #F57A82 60% 100%);
+  border-radius: 50%;
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.12); }
+  #myChart:after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: calc(50% - 35%);
+    left: calc(50% - 35%);
+    background-color: white;
+    color: initial;
+    border-radius: 50%;
+    background: #fff; }
+
+#kcal {
+  position: absolute;
+  font-weight: bold;
+  font-size: 24px; }
+  #kcal:after {
+    content: 'Kcal';
+    position: absolute;
+    top: 1.8rem;
+    left: calc(50% - 12px);
+    font-size: 12px;
+    font-weight: 200; }
+
+.chart-value {
+  width: 50%;
+  float: left;
+  color: #545454;
+  font-size: 14px; }
+  .chart-value ul {
+    margin-left: 0.5em;
+    font-weight: bold; }
+    .chart-value ul li.protein {
+      color: #3C989E; }
+    .chart-value ul li.carbohydrates {
+      color: #F4CDA5; }
+    .chart-value ul li.fat {
+      color: #F57A82; }
+
+.nutrient-con {
+  float: right;
+  font-weight: 400; }
+  .nutrient-con:after {
+    content: ' g'; }
+
+@keyframes moveFruitBlock {
+  0% {
+    opacity: 0;
+    transform: translate(0, 10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+/*# sourceMappingURL=style.css.map */

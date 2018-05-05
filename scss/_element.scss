@@ -1,0 +1,131 @@
+// font-color
+$white: white;
+$black: black;
+$lightBlack: #545454;
+$main: #e6a958;
+$blue: #5DB5A4;
+
+
+// font-size
+$fontHeader: 36px;
+$fontTitle: 24px;
+$fontSize: 16px;
+
+// bg-color
+$bgColor: rgba(255, 255, 255, 0.83);
+
+// chart color
+$protein: #5DB5A4;
+$carbohydrates: #F4CDA5;
+$fat: #F57A82;
+
+
+
+// text shadow
+$textShadow: 4px 1px 8px black;
+
+// button
+$btnTypes: (
+  black   :  rgba(210, 210, 210, 0.32),
+  white   :  #fff,
+  main    :  #e6a958,
+  );
+
+@each $name, $color in $btnTypes {
+  $darkbg : lightness($color) < lightness(grey);
+
+  .btn-#{$name} {
+    background: $color;
+    color: if( $darkbg, #fff ,#000);;
+    border: 1px solid darken($color,25%);
+    &:hover{
+      background: darken( $color,25% );
+      color: if( $darkbg, #fff ,#000);
+      transition: 0.3s;
+    }
+  }
+}
+
+// input style
+input{
+  width: 100%;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 5px 10px;
+}
+
+p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+// font-align
+.text-center{ text-align: center; }
+.text-left{ text-align: left; }
+.text-right{ text-align: right; }
+
+
+// images
+.img-fit{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+// div circle
+.circle{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+@mixin circle($width) { 
+  width: $width;
+  height: $width;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.63);
+}
+
+@mixin square($width) { 
+  width: $width;
+  height: $width;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.63);
+}
+
+@mixin borderRadius($color , $bgcolor , $radius) { 
+  background-color: $bgcolor;
+  color: $color;
+  border-radius: $radius;
+}
+
+// flex center
+.dis-flex{
+  display: flex;
+}
+
+// box-shadow
+.box-shadow{
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+// clearfix
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1; /*For IE 6&7 only*/
+}
+
+
+
+
+
+

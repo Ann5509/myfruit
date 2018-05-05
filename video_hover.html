@@ -1,0 +1,38 @@
+<div class="videoList">
+	<div class="videoarea">
+		<a href="https://www.youtube.com/watch?v=ecmEzXYR4Bw" title="" rel="prettyPhoto[pp_gal]">
+			<img src="http://grandeetour.ksdemos.com/upload/article/163/163/793512168715e912f97df671c3a76299.jpg" width="465" height="265">
+		</a>
+		<div class="videohover">
+			<div class="flexbox">
+				<h4>Dish Name Here</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+.videoarea{
+	position: relative;
+}
+
+.videoarea:hover .videohover{
+	opacity: 1;
+}
+
+.videohover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+	transition: all .5s ease;
+}
+
+.flexbox {
+    margin: auto;
+}

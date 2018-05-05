@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>幫我配水果</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/kule.lazy/3.1.171101/css/kule-reset.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+  <main class="main-banner banner-01">
+    <nav class="top-menu">
+      <a href="index.html" class="back-arrow"></a>
+    </nav>
+
+    <div class="main-con">
+      <a href="javascript:void(0)" class="circle dis-flex"><p class="link-text" onclick="setFruitBlock()">幫我配</p></a>
+
+      <!-- nutrient-block 
+      <div class="nutrient-block">
+
+        <div class="input-form clearfix">
+          <ul class="input-selected">
+            <li class="selected-item">運動 <button>X</button></li>
+            <li class="selected-item">消化 <button>X</button></li>
+            <li class="selected-item">維生素 <button>X</button></li>
+            <li class="selected-item">運動 <button>X</button></li>
+            <li class="selected-item">消化 <button>X</button></li>
+            <li class="selected-item">維生素 <button>X</button></li>
+          </ul>
+          <button class="input-add">＋</button>
+        </div>
+
+      </div>
+      <!-- / nutrient-block -->
+
+
+      <!-- result-block -->
+      <div class="result-block">
+        <div class="result-area"></div>
+        
+        <div class="result-toggle"><!-- 
+          <div class="result-more">
+            <p class="result-more-title">草莓</p>
+            <div class="result-more-content">
+              <p style="margin-bottom: 5px;">富含可溶性膳食纖維，對解除便秘有療效。</p>
+              <span class="result-more-tag">維生素A</span>
+              <span class="result-more-tag">維生素B</span>
+            </div>
+          </div>
+          <div class="result-more">
+            <p class="result-more-title">草莓</p>
+            <div class="result-more-content">
+              <p style="margin-bottom: 5px;">富含可溶性膳食纖維，對解除便秘有療效。</p>
+              <span class="result-more-tag">維生素A</span>
+              <span class="result-more-tag">維生素B</span>
+            </div>
+          </div> -->
+        </div>
+
+        <button class="readmore">展開更多說明</button>
+      </div>
+      <!-- / result-block -->
+
+
+      <!-- chart-block -->
+      <div class="chart-block">
+        <h3 class="chart-block-title">此組合富含：</h3>
+        <ul class="chart-tags"></ul>
+        <div class="chart clearfix">
+          <div class="chart-img">
+            <div id="myChart"></div>
+            <span id="kcal">106</span>
+          </div>
+          <!-- chart -->
+          <div class="chart-value">
+            <ul>
+              <li class="protein">蛋白質<span class="nutrient-con">21</span></li>
+              <li class="carbohydrates">碳水化合物<span class="nutrient-con">21</span></li>
+              <li class="fat">脂肪<span class="nutrient-con">21</span></li>
+              <li class="dietaryFiber">膳食纖維<span class="nutrient-con">21</span></li>
+              <li class="sugar">糖份<span class="nutrient-con">21</span></li>
+            </ul>
+          </div>
+          <!-- chart -->
+        </div>
+        <!-- table 
+        <div class="chart-table">
+          <p>熱量 <span class="n-value">12</span></p>
+          <p>熱量 <span class="n-value">12</span></p>
+          <p>熱量 <span class="n-value">12</span></p>
+        </div>
+        <!-- table -->
+      </div>
+      <!-- / chart-block -->
+    </div>
+
+
+    <!-- <nav class="bottom-menu">
+      <button class="btn-fruit" onclick="setFruitBlock()">幫我選</button>
+    </nav> -->
+
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://leaverou.github.io/conic-gradient/conic-gradient.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://leaverou.github.io/conic-gradient/conic-gradient.js"></script>
+  <script type="text/javascript"> 
+
+    var allData = {};
+    var uniqueNum = [];
+    var inputValues = ['1','1','1'];
+
+    // get fruits.json
+    $.ajax({
+      url: 'fruits.json',
+      dataType: 'json',
+      async: false,
+      success: function(res) {
+        allData = (typeof res === 'string') ? JSON.parse(res) : res;
+      },
+
+      error: function() {
+
+      }
+    });
+
+
+    // -- 取得所有JSON資料
+    var fruitData = allData.fruits;
+    var seasonData = allData.season;
+    var nutrientsData = allData.nutrients;
+    var heatOfFoodData = allData.heatOfFood;
+
+    
+    // == append 替換字
+    $(document).ready(function() {
+
+      $('.link-text').click(function(){
+        $(this).html("重新配");
+      });
+
+    });
+
+
+    // == append 水果block
+    function setFruitBlock(){
+
+      var fruitKeys = Object.keys(fruitData);
+      var fruitValues = Object.values(fruitData);
+      uniqueNum = getRandomNum(fruitKeys.length, 0 , 3);
+      var fruitString = '' ;
+      var fruitToggleString = '';
+      var fruitSeason = [];
+      var chartTags = [];
+      var chartTagsArr = [];
+
+      getFruitHeat(uniqueNum);
+
+      for (var i = 0; i < uniqueNum.length; i++) {
+
+        var fruitInfo = {
+          zhName: fruitData[uniqueNum[i]].fruitName,
+          enName: fruitData[uniqueNum[i]].fruitEnName,
+          season: getFruitSeason(fruitData[uniqueNum[i]].season) ? "season" : "" ,
+          info: fruitData[uniqueNum[i]].info,
+          nutrients: fruitData[uniqueNum[i]].nutrients,
+          num: '1'
+        };
+
+        fruitString += setFruitString( fruitInfo );
+        fruitToggleString += setToggleString(fruitInfo);
+
+        chartTags.push(fruitInfo.nutrients);
+
+      }
+
+      for (var i = 0; i < chartTags.length; i++) {
+
+        var a = chartTags[i].split(',');
+
+        for (var j = 0; j < a.length; j++) {
+
+          chartTagsArr.push(a[j]);
+
+        }
+
+      }
+
+      $('.result-area').html(fruitString);
+      $('.result-toggle').html(fruitToggleString);
+      $('.chart-tags').html(getNutrientTags(setUniqueValue(chartTagsArr),'chart'));
+
+    };
+
+
+    // == append 營養比例block
+    function setChartBlock(){
+
+    };
+
+
+    // == GET 水果營養素
+    function getFruitHeat(fruitNum){
+
+      var heatOfitem = [];
+      var weight = [] ;
+      var weightSum = 0;
+      var protein = 0;
+
+      for (var i = 0; i < fruitNum.length; i++) {
+
+        heatOfitem.push(heatOfFoodData[fruitNum[i]]);
+
+        weight[i] = Math.floor(heatOfitem[i].weight * heatOfitem[i].kcal);
+
+        weightSum += weight[i];
+
+      }
+
+      getHeatOfFood(heatOfitem);
+
+    };
+
+
+    // == GET 水果月份
+    function getFruitSeason(season){
+
+      var month = season.split(',');
+
+      for (var i = 0; i < month.length; i++) {
+        return month[i] > getMonth();
+      }
+
+    };
+
+
+    // == Set 水果數量
+    function setFruitsNum(){
+
+      return 1;
+
+    }
+
+
+    // == 水果block string
+    function setFruitString(data){
+      return '<div class="result-item">\
+      <div class="result-img">\
+      <div class="square img-fit" style="background-image: url(images/fruit/'+ data.enName +'.jpg);"></div>\
+      <div class="addnums">\
+      <a href="javascript:void(0)" class="minus"></a>\
+      <input id="numCount" class="numCount" type="text" maxlength="2" value="' + data.num + '"/>\
+      <a href="javascript:void(0)" class="plus"></a>\
+      </div>\
+      </div>\
+      <div class="result-info">\
+      <h4 class="fruitname ' + data.season + '">' + data.zhName + '</h4>\
+      </div>\
+      </div>';
+    };
+
+
+    // == 水果Toggle string 
+    function setToggleString(data){
+      return '<div class="result-more">\
+      <div class="result-img result-more-title">\
+      <div class="square img-fit" style="background-image: url(images/fruit/'+ data.enName +'.jpg);"></div>\
+      <div class="addnums">\
+      <a href="javascript:void(0)" class="minus"></a>\
+      <input id="numCount" class="numCount" type="text" maxlength="2" value="' + data.num + '"/>\
+      <a href="javascript:void(0)" class="plus"></a>\
+      </div>\
+      </div>\
+      <div class="result-more-content">\
+      <h4 class="fruitname ' + data.season + '">' + data.zhName + '</h4>\
+      <p style="margin-bottom: 5px;">' + data.info + '</p>\
+      <ul>' + getNutrientTags(data.nutrients,'block') + '</ul>\
+      </div>\
+      </div>';
+    }
+
+
+    // == 水果營養素tag string 
+    function getNutrientTags(data, status){
+
+      var tagsString = '';
+      var arr;
+
+      if (status == 'block') {
+
+        arr = data.split(',');
+
+      }else if(status == 'chart'){
+
+        arr = data;
+        console.log(arr);
+
+      }
+
+      for (var i = 0; i < arr.length; i++) {
+
+        tagsString += '<li class="tags result-more-tag">' + nutrientsData[arr[i]].name + '</li>';
+
+      }
+
+      return tagsString;
+
+    }
+
+
+    // == get 現在時間
+    function getMonth(){
+      var theDate = new Date();
+      return theDate.getMonth()+1;
+    };
+
+
+    // == 取得亂數數字
+    function getRandomNum(max , min , num){
+
+      var arr = new Set();
+
+      while( arr.size < num){
+
+        arr.add(Math.floor(Math.random()*max));
+
+      }
+
+      return [...arr];
+
+    };
+
+
+    // == 資料去重複
+    function setUniqueValue(arr){
+
+      var arrSort = arr.sort();
+      var arr = [];
+
+      for (var i = 0; i < arrSort.length; i++) {
+
+        if (arrSort[i] != arrSort[i+1]) {
+
+          arr.push(arrSort[i]);
+
+        }
+
+      }
+
+      return arr;
+
+    }
+
+
+    // 取得水果熱量
+    function getHeatOfFood( array ){
+
+      // 計算份數
+      var countArr = array;
+      countArr = getCountArr(countArr);
+
+      // 計算份數取得水果營養成分數值
+      getCountHeat(countArr);
+
+    }
+
+
+    // == 依照數量取得水果營養成分數值
+    function getCountHeat(arr){
+
+      var heatName = Object.keys(heatOfFoodData[1]);
+      var result = [];
+
+      for (var i = 0; i < heatName.length; i++) {
+
+        var nName = heatName[i];
+
+        result[nName] = arr.reduce( function(accumulator, currentValue) {
+          return accumulator + parseFloat(currentValue[i]);
+        }, 0);
+
+        var floorResult = result[nName].toFixed(1);
+
+        $('.'+nName+' span').html(floorResult);
+
+      }
+
+      result['allKcal'] = arr.reduce( function(accumulator, currentValue) {
+        return accumulator + parseFloat(currentValue[0]*currentValue[1]);
+      }, 0);
+
+      document.getElementById('kcal').innerHTML = parseInt(result['allKcal']);
+
+    }
+
+    // Toggle Block
+    $(document).on('click', '.readmore' , function(){
+      $(this).toggleClass('active')
+      $('.result-toggle').slideToggle();
+      $('.result-area').slideToggle();
+    });
+
+
+    // 加減欄位數字
+    $(document).on('click' , '.minus ,.plus' , function(){
+
+      var a = parseInt($(this).siblings('.numCount').val());
+
+      if ($(this).hasClass('plus')) {
+
+        a++;
+
+      }else{
+
+        if(a != 0){
+          a--;
+        }
+
+      }
+
+      $(this).siblings('.numCount').val(a);
+      getInputsNum();
+      getFruitHeat(uniqueNum);
+
+    });
+
+
+    // == 紀錄input數值
+    function getInputsNum(){
+
+      var b = document.getElementsByClassName('numCount');
+
+      for (var i = 0; i < 3 ; i++) {
+
+        inputValues[i] = b[i].value;
+
+      }
+
+      return inputValues;
+
+    }
+
+
+    // == 計算水果份數
+    function getCountArr( arr ){
+
+      // 去除不要的
+      var arrValue;
+      var newArray = [];
+      var num;
+
+      for(var i = 0; i<arr.length ; i++){
+
+        arrValue = Object.values(arr[i]);
+        num = [];
+
+        for(var j=0 ; j<arrValue.length; j++){
+
+          if (j != 1){ 
+            num.push(parseFloat(arrValue[j]) * inputValues[i]);
+          }else{
+            num.push(parseFloat(arrValue[j]));
+          }
+
+        }
+
+        newArray[i] = num;
+
+      }
+
+      return newArray;
+
+    }
+
+
+    //start function
+    setFruitBlock();
+
+
+  </script>
+
+  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
