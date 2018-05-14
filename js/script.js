@@ -42,6 +42,10 @@ $(document).on('change', '.plan-select', function() {
 
     planSNum = $(this).val();
     $('.result-block,.chart-block').show();
+    $('.header-title').css({
+        'padding-top':'50px',
+        'transition': '0.3s'
+    });
     getSituation(planSNum);
 
 });
