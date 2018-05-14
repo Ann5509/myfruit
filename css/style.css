@@ -212,6 +212,8 @@ body {
     height: 90px;
     border-radius: 15px;
     border: 2px solid rgba(255, 255, 255, 0.63); }
+  .plan-s .result-block {
+    display: none; }
 
 .result-area {
   display: flex;
@@ -405,6 +407,8 @@ body {
   display: block;
   align-items: center;
   padding: 15px; }
+  .plan-s .chart-block {
+    display: none; }
 
 .chart-block-title {
   font-size: 14px;

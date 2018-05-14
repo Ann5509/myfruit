@@ -37,24 +37,58 @@ if ($('main').hasClass('plan-s')) {
 
 };
 
+
 $(document).on('change', '.plan-select', function() {
 
     planSNum = $(this).val();
     $('.result-block,.chart-block').show();
-    setFruitBlock();
+    getSituation(planSNum);
 
 });
 
+
+// == 整理情境
+function getSituation(num) {
+
+    var thatSitu = situationData[num].fruits;
+    var thatArr = thatSitu.split(',');
+    var allFruitArr = [];
+
+    for (var i = 0; i < fruitData.length; i++) {
+
+        for (var j = 0; j < thatArr.length; j++) {
+
+            if (fruitData[i].fruitName == thatArr[j]) {
+                allFruitArr.push(i);
+            }
+
+        }
+
+    }
+
+    allFruitArr.sort(function(a, b) {
+        return 0.5 - Math.random();
+    });
+
+    planSNum = allFruitArr.slice(0, 3);
+
+    setFruitBlock(planSNum);
+
+}
+
+
 // == append 水果block
-function setFruitBlock() {
+function setFruitBlock(num) {
 
     var fruitKeys = Object.keys(fruitData);
     var fruitValues = Object.values(fruitData);
-    uniqueNum = getRandomNum(fruitKeys.length, 0, 3);
+    uniqueNum = (typeof num === "undefined") ? getRandomNum(fruitKeys.length, 0, 3) : num ;
     var fruitString = '';
     var fruitSeason = [];
     var chartTags = [];
     var chartTagsArr = [];
+    console.log(num);
+    console.log(uniqueNum);
 
     getFruitHeat(uniqueNum);
 

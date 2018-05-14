@@ -156,6 +156,9 @@ body{
 		margin: 0 auto;
 		@include square(90px);
 	}
+	.plan-s &{
+		display: none;
+	}
 }
 
 .result-area{
@@ -400,6 +403,9 @@ body{
 	align-items: center;
 	@extend .box-shadow, .content-style;
 	padding: 15px;
+	.plan-s &{
+		display: none;
+	}
 }
 
 .chart-block-title{
