@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fruit Plan 水果配</title>
+    <meta charset="utf-8">
+    <meta name="description" content="fruits">
+    <meta name="keywords" content="fruits">
+    <meta name="author" content="Ann-Lin">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/kule.lazy/3.1.171101/css/kule-reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <main id="main" class="main-banner plan-s">
+        <nav class="top-menu">
+            <a href="index.html" class="back-arrow"></a>
+        </nav>
+        <div class="header-title">
+            <h1 class="main-title text-center">想在 ＿＿ 時吃</h1>
+        </div>
+        <div class="main-con">
+            <div class="select">
+                <select class="plan-select">
+                    <option selected>請選擇情境</option>
+                </select>
+            </div>
+            <!-- result-block -->
+            <div class="result-block">
+                <div class="select">
+                    <select class="result-select">
+                        <option value="1">份數(100g)</option>
+                        <option value="2">顆/根</option>
+                    </select>
+                </div>
+                <div class="result-area"></div>
+                <div class="result-toggle"></div>
+                <!-- <button class="readmore">展開更多說明</button> -->
+            </div>
+            <!-- / result-block -->
+            <!-- chart-block -->
+            <div class="chart-block">
+                <h3 class="chart-block-title">此組合富含：</h3>
+                <ul class="chart-tags"></ul>
+                <div class="chart clearfix">
+                    <div class="chart-img">
+                        <div id="myChart"></div>
+                        <span id="kcal"></span>
+                    </div>
+                    <!-- chart -->
+                    <div class="chart-value">
+                        <ul class="chart-ul">
+                            <li class="chart-li protein">蛋白質<span class="nutrient-con"></span></li>
+                            <li class="chart-li carbohydrates">碳水化合物<span class="nutrient-con"></span></li>
+                            <li class="chart-li fat">脂肪<span class="nutrient-con"></span></li>
+                            <li class="chart-li dietaryFiber">膳食纖維<span class="nutrient-con"></span></li>
+                            <li class="chart-li sugar">糖份<span class="nutrient-con"></span></li>
+                        </ul>
+                    </div>
+                    <!-- chart -->
+                </div>
+            </div>
+            <!-- table -->
+        </div>
+        <!-- / chart-block -->
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://leaverou.github.io/conic-gradient/conic-gradient.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

@@ -10,11 +10,19 @@
     background: #000;
 }
 
+body{
+	background-image: url('../images/banner/banner.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
 
 // nav
 .top-menu{
-	position: relative;
-	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 5;
 }
 
 .back-arrow{
@@ -40,50 +48,61 @@
 	background: rgba(255, 255, 255, 0.7);
 }
 
-.btn-fruit{
-
-}
-
 
 // main
 .main-banner{
 	position: relative;
+	margin: 0 auto;
 	width: 100%;
+	max-width: 375px;
 	height: 100%;
 	min-height: 100vh;
-	background-image: url('../images/banner/banner.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	&.banner-01{
-		background-image: url('../images/banner/banner-01.jpg');
-	}
 }
 
 .header-title{
 	position: relative;
-	padding: 100px 0 80px;
+	padding: 100px 15px 80px;
 	color: $white;
 	font-size: $fontHeader;
 	text-shadow: $textShadow;
+	.plan-s &{
+		padding-bottom: 0;
+	}
+}
+
+.sub-title{
+	font-size: 20px;
+	margin-bottom: 10px;
 }
 
 .main-con{
+	.click-block{
+		width: 100%;
+	}
 	padding: 20px;
-	// margin-bottom: 50px;
+	padding-bottom: 0;
 	.circle{
+		margin-bottom: 20px;
 		@include circle(120px);
-		background-color: rgba(255, 255, 255, 0.3);
-		margin: -40px auto 30px;
-		color: $white;
-		font-size: $fontTitle;
-		text-shadow: $textShadow;
-		@extend .box-shadow;
+		@extend .box-shadow , .box-style;
 		&.active{
 			background-color: #d64b4b78;
 			border-color: #ce3a3a9e;
 		}
 	}
+	.square{
+		display: flex;
+		margin: 0px auto 20px;
+		@include square(120px);
+		@extend .box-shadow , .box-style;
+	}
+}
+
+.plan-select{
+	width: 100%;
+	border: 2px solid rgba(255, 255, 255, 0.63);
+	margin-bottom: 15px;
+	@extend .box-style;
 }
 
 .link-text{
@@ -200,6 +219,28 @@
 	background: transparent;
 }
 
+.select{
+	position: relative;
+}
+
+.select:after{
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 6px solid #666;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	pointer-events: none;
+}
+
+.result-select{
+	padding: 10px;
+	width: 100%;
+}
+
 .result-item{    
 	animation: moveFruitBlock linear 0.3s;
 	animation-iteration-count: 1; 
@@ -310,7 +351,7 @@
 	border-radius: 5px;
 	font-size: 10px;
 	margin-right: 3px;
-	width: 58px;
+	width: fit-content;
 	text-align: center;
 }
 
@@ -398,7 +439,7 @@
 	height: 0;
 	width: 100%;
 	padding-bottom: 100%;
-	background: conic-gradient($protein 0 30%, $carbohydrates 30% 60%, $fat 60% 100%);
+	// background: conic-gradient($protein 0 30%, $carbohydrates 30% 60%, $fat 60% 100%);
 	border-radius: 50%;
 	box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.12);
 	&:after{
@@ -432,14 +473,22 @@
 	float: left;
 	color: $lightBlack;
 	font-size: 14px;
-	ul{
+	.chart-ul{
 		margin-left: 0.5em;
 		font-weight: bold;
-		li{
+		.chart-li{
+			margin-bottom: 2px;
 			&.protein{color: #3C989E;}
 			&.carbohydrates{color: #F4CDA5;}
 			&.fat{color: #F57A82;}
 		}
+	}
+	.dietaryFiber{
+		font-size: 10px;
+		text-indent: 1.2em;
+	}
+	.sugar{
+		@extend .dietaryFiber;
 	}
 }
 

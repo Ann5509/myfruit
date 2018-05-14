@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>水果</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/kule.lazy/3.1.171101/css/kule-reset.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Fruit Plan 水果配</title>
+    <meta charset="utf-8">
+    <meta name="description" content="fruits">
+    <meta name="keywords" content="fruits">
+    <meta name="author" content="Ann-Lin">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/kule.lazy/3.1.171101/css/kule-reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
+    <main class="main-banner">
+        <div class="header-title">
+            <p class="sub-title text-center">一天兩份水果，你吃了嗎？</p>
+            <h1 class="main-title text-center">我想要 ＿＿ 配</h1>
+        </div>
+        <div class="main-con">
+            <div class="click-block">
+                <a href="plan-situation.html" class="square plan-situation">
+                    <p class="link-text">情境配</p>
+                </a>
+                <a href="plan-free.html" class="square plan-free">
+                    <p class="link-text">自由配</p>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
 
-  <main class="main-banner">
-    <h1 class="header-title text-center">我想要...</h1>
+      $(document).on('click', '.plan-situation' , function(){
+        $('.plan-select').html('aa');
+      });
 
-    <div class="main-con">
-      <a href="javascript:void(0)" class="circle dis-flex" style="margin-bottom: 20px;"><p class="link-text">自己配</p></a>
-      <a href="match.html" class="circle dis-flex"><p class="link-text">幫我配</p></a>
-    </div>
-
-  </main>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    </script>
 </body>
+
 </html>

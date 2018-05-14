@@ -57,10 +57,17 @@ p {
   border-radius: 50%; }
 
 .dis-flex {
-  display: flex; }
+  display: flex;
+  margin: auto; }
 
-.box-shadow, .main-con .circle, .nutrient-block, .input-add, .input-selected .selected-item, .result-block, .result-img, .moreinfo, .chart-block {
+.box-shadow, .main-con .circle, .main-con .square, .nutrient-block, .input-add, .input-selected .selected-item, .result-block, .result-img, .moreinfo, .chart-block {
   box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.5); }
+
+.box-style, .main-con .circle, .main-con .square, .plan-select {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 24px;
+  text-shadow: 4px 1px 8px black; }
 
 .clearfix:before,
 .clearfix:after {
@@ -83,9 +90,17 @@ p {
   color: #fff;
   background: #000; }
 
+body {
+  background-image: url("../images/banner/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
 .top-menu {
-  position: relative;
-  height: 50px; }
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5; }
 
 .back-arrow {
   position: absolute;
@@ -110,38 +125,51 @@ p {
 
 .main-banner {
   position: relative;
+  margin: 0 auto;
   width: 100%;
+  max-width: 375px;
   height: 100%;
-  min-height: 100vh;
-  background-image: url("../images/banner/banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-  .main-banner.banner-01 {
-    background-image: url("../images/banner/banner-01.jpg"); }
+  min-height: 100vh; }
 
 .header-title {
   position: relative;
-  padding: 100px 0 80px;
+  padding: 100px 15px 80px;
   color: white;
   font-size: 36px;
   text-shadow: 4px 1px 8px black; }
+  .plan-s .header-title {
+    padding-bottom: 0; }
+
+.sub-title {
+  font-size: 20px;
+  margin-bottom: 10px; }
 
 .main-con {
-  padding: 20px; }
+  padding: 20px;
+  padding-bottom: 0; }
+  .main-con .click-block {
+    width: 100%; }
   .main-con .circle {
+    margin-bottom: 20px;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.63);
-    background-color: rgba(255, 255, 255, 0.3);
-    margin: -40px auto 30px;
-    color: white;
-    font-size: 24px;
-    text-shadow: 4px 1px 8px black; }
+    border: 2px solid rgba(255, 255, 255, 0.63); }
     .main-con .circle.active {
       background-color: #d64b4b78;
       border-color: #ce3a3a9e; }
+  .main-con .square {
+    display: flex;
+    margin: 0px auto 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.63); }
+
+.plan-select {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.63);
+  margin-bottom: 15px; }
 
 .link-text {
   margin: auto; }
@@ -234,6 +262,25 @@ p {
   font-weight: bold;
   background: transparent; }
 
+.select {
+  position: relative; }
+
+.select:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #666;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  pointer-events: none; }
+
+.result-select {
+  padding: 10px;
+  width: 100%; }
+
 .result-item {
   animation: moveFruitBlock linear 0.3s;
   animation-iteration-count: 1; }
@@ -323,7 +370,7 @@ p {
   border-radius: 5px;
   font-size: 10px;
   margin-right: 3px;
-  width: 58px;
+  width: fit-content;
   text-align: center; }
 
 .chart-tags {
@@ -391,7 +438,6 @@ p {
   height: 0;
   width: 100%;
   padding-bottom: 100%;
-  background: conic-gradient(#5DB5A4 0 30%, #F4CDA5 30% 60%, #F57A82 60% 100%);
   border-radius: 50%;
   box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.12); }
   #myChart:after {
@@ -423,15 +469,20 @@ p {
   float: left;
   color: #545454;
   font-size: 14px; }
-  .chart-value ul {
+  .chart-value .chart-ul {
     margin-left: 0.5em;
     font-weight: bold; }
-    .chart-value ul li.protein {
-      color: #3C989E; }
-    .chart-value ul li.carbohydrates {
-      color: #F4CDA5; }
-    .chart-value ul li.fat {
-      color: #F57A82; }
+    .chart-value .chart-ul .chart-li {
+      margin-bottom: 2px; }
+      .chart-value .chart-ul .chart-li.protein {
+        color: #3C989E; }
+      .chart-value .chart-ul .chart-li.carbohydrates {
+        color: #F4CDA5; }
+      .chart-value .chart-ul .chart-li.fat {
+        color: #F57A82; }
+  .chart-value .dietaryFiber, .chart-value .sugar {
+    font-size: 10px;
+    text-indent: 1.2em; }
 
 .nutrient-con {
   float: right;

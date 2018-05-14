@@ -1,164 +1,770 @@
 {
-  "fruits": [
+    "fruits": [
     {
-      "fruitEnName": "strawberry",
-      "fruitName": "草莓",
-      "neckName": "",
-      "season": "1,2,3,12",
-      "nutrients": "2,3,9",
-      "info": "擁有豐富的維生素C、果膠和膳食纖維，可以幫助消化。"    
+        "fruitEnName": "pineapple",
+        "fruitName": "鳳梨",
+        "neckName": "鳳梨,旺來,波羅,黃萊,黃梨,王萊",
+        "season": "6,7,8",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": "幫助屬於蛋白質類的蛋、豆、魚、肉類等食物分解"
     },
     {
-      "fruitEnName": "guava",
-      "fruitName": "芭樂",
-      "neckName": "",
-      "season": "1,2,11,12",
-      "nutrients": "9",
-      "info": "富含可溶性膳食纖維，對解除便秘有療效。"
+        "fruitEnName": "banana",
+        "fruitName": "香蕉",
+        "neckName": "香蕉,芎蕉,弓蕉,甘蕉",
+        "season": "1,2,3,4,5,6,7,8,9,10,11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": "富含大量的維生素C，抗氧化及美膚"
     },
     {
-      "fruitEnName": "banana",
-      "fruitName": "香蕉",
-      "neckName": "甘蕉,芎蕉,芽蕉,弓蕉",
-      "season": "2,3,4,5,6",
-      "nutrients": "4,5,9",
-      "info": "富含大量的維生素C，抗氧化及美膚"
+        "fruitEnName": "guava",
+        "fruitName": "芭樂",
+        "neckName": "番石榴,芭樂,拔仔,扒仔,朳仔,那拔仔,藍拔",
+        "season": "1,2,11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": "富含可溶性膳食纖維，對解除便秘有療效。"
+    },
+    {
+        "fruitEnName": "starfruit",
+        "fruitName": "楊桃",
+        "neckName": "羊桃,洋桃,陽桃,五稜子,五斂子",
+        "season": "1,2,3,10,11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": "含大量糖類及維生素，增強機體抗病能力。"
+    },
+    {
+        "fruitEnName": "eggapple",
+        "fruitName": "蛋黃果",
+        "neckName": "仙桃",
+        "season": "1,2",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": "提高消化能力、提神醒腦、活血強身、減壓降脂等。"
+    },
+    {
+        "fruitEnName": "orange",
+        "fruitName": "橘子",
+        "neckName": "橘子,蘆柑,壼柑,凸柑,乳柑,潮州柑",
+        "season": "1,11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": "維持腸胃舒適，美化肌膚，解熱、祛痰。"
+    },
+    {
+        "fruitEnName": "strawberry",
+        "fruitName": "草莓",
+        "neckName": "",
+        "season": "1,2,3,",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": "擁有豐富的維生素C、果膠和膳食纖維，可以幫助消化。"
+    },
+    {
+        "fruitEnName": "durian",
+        "fruitName": "榴槤",
+        "neckName": "榴蓮,流連,山韶子",
+        "season": "4,5,6,7",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": "滋補身體，潤滑肌膚。"
+    },
+    {
+        "fruitEnName": "apple",
+        "fruitName": "蘋果",
+        "neckName": "柰,林檎,沙果,海棠,花紅,檳子",
+        "season": "3,4,5,6,7",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": "有益心臟，提高記憶力，保持泌尿系統的健康。"
+    },
+    {
+        "fruitEnName": "avocado",
+        "fruitName": "酪梨",
+        "neckName": "酪梨,牛油果(梨),黃油果(梨),油梨,鰐(鱷)梨,幸福果,樂天果",
+        "season": "7,8,9,10",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": "減少罹患心臟病的機率，延長飽足感並提升新陳代謝。"
+    },
+    {
+        "fruitEnName": "cherry",
+        "fruitName": "櫻桃",
+        "neckName": "鶯桃,荊桃",
+        "season": "4,5,6,7,8,9,10,11",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": "補血養顏、延緩衰老，刺激腸胃蠕動和消化液分泌。"
+    },
+    {
+        "fruitEnName": "grape",
+        "fruitName": "葡萄",
+        "neckName": "蒲桃,蒲萄,草龍珠,蒲陶,葡桃",
+        "season": "1,2,5,6,7,8,9,10,11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "grapefruit",
+        "fruitName": "葡萄柚",
+        "neckName": "西柚,朱欒",
+        "season": "10,11,12",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "maskmelon",
+        "fruitName": "甜瓜",
+        "neckName": "甜瓜,甘瓜,果瓜,香瓜,梨仔瓜,澎湖瓜,洋香瓜,網仔瓜,哈蜜瓜",
+        "season": "7",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "kiwi",
+        "fruitName": "奇異果",
+        "neckName": "彌猴桃,猴桃,猴梨,藤梨,毛桃,羊桃,紅藤梨,金桃,楊桃",
+        "season": "11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "lemon",
+        "fruitName": "檸檬",
+        "neckName": "",
+        "season": "6,7,8",
+        "nutrients": "3,5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "longan",
+        "fruitName": "龍眼",
+        "neckName": "",
+        "season": "7,8",
+        "nutrients": "3,5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "loquat",
+        "fruitName": "枇杷",
+        "neckName": "琶琵果",
+        "season": "1,2,3,4,5,11,12",
+        "nutrients": "1,3,5,6,7,9,10,11,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "lychee",
+        "fruitName": "荔枝",
+        "neckName": "丹荔,荔錦,麗枝,離枝",
+        "season": "5,6,7",
+        "nutrients": "3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "mandarin_orange",
+        "fruitName": "甜橙",
+        "neckName": "甜橙,柳橙,柳丁,印子柑,廣柑",
+        "season": "1,9,10,11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "mango",
+        "fruitName": "芒果",
+        "neckName": "檬果,檨仔,菴羅果",
+        "season": "3,4",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "mangosteen",
+        "fruitName": "山竹",
+        "neckName": "鳳果,都捻子,倒稔子,羅漢果,莽吉柿,果中之后",
+        "season": "5,6",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "melon",
+        "fruitName": "甜瓜",
+        "neckName": "甜瓜,甘瓜,果瓜,香瓜,梨仔瓜,澎湖瓜,洋香瓜",
+        "season": "4,5,6,7,8,9",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "mulberry",
+        "fruitName": "桑葚",
+        "neckName": "桑果,桑葚兒",
+        "season": "4,5,6",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "murcott",
+        "fruitName": "茂谷柑",
+        "neckName": "柑",
+        "season": "1,2,3,11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "papaya",
+        "fruitName": "木瓜",
+        "neckName": "番木瓜,番瓜",
+        "season": "8,9,10,11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "passionfruit",
+        "fruitName": "百香果",
+        "neckName": "時計果,西番果,西番蓮,美里瓜",
+        "season": "5,6,7,8,9,10",
+        "nutrients": "1,6,7,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "peach",
+        "fruitName": "水蜜桃",
+        "neckName": "毛桃,白桃",
+        "season": "6,7,8",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "waterpear",
+        "fruitName": "水梨",
+        "neckName": "梨子,大雪梨,山褵,快果,果宗",
+        "season": "8,9",
+        "nutrients": "3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "persimmon",
+        "fruitName": "甜柿",
+        "neckName": "柿子,柹,香柿",
+        "season": "9,10,11",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "pitaya",
+        "fruitName": "紅龍果",
+        "neckName": "火龍果,仙蜜果",
+        "season": "5,6,7,8,9,10,11,12",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "plum",
+        "fruitName": "李子",
+        "neckName": "",
+        "season": "3,4,5,6,7,8",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "pomegranate",
+        "fruitName": "石榴",
+        "neckName": "石榴, 榭榴, 謝榴, 樹榴",
+        "season": "1,2,3,4,5,6,7,8,9,10,11,12",
+        "nutrients": "1,5,6,7,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "shaddocks",
+        "fruitName": "柚子",
+        "neckName": "",
+        "season": "8,9,10",
+        "nutrients": "3,5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "sugarapple",
+        "fruitName": "釋迦",
+        "neckName": "番荔枝,釋迦果,佛頭果,番梨",
+        "season": "1,2,7,8,9,10,11,12",
+        "nutrients": "5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "tankan",
+        "fruitName": "桶柑",
+        "neckName": "",
+        "season": "1,2,3,4",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "watermelon",
+        "fruitName": "西瓜",
+        "neckName": "水瓜,寒瓜,夏瓜",
+        "season": "5,6",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "wax_apple",
+        "fruitName": "蓮霧",
+        "neckName": "璉霧,輦霧,爪哇蒲桃",
+        "season": "1,2,3,4,5,6,7,8",
+        "nutrients": "1,3,5,6,7,9,10,12",
+        "info": ""
+    },
+    {
+        "fruitEnName": "yentsumei",
+        "fruitName": "胭脂梅",
+        "neckName": "梅子,紅李",
+        "season": "3,4,5",
+        "nutrients": "1,3,5,6,7,9,12",
+        "info": ""
     },
     {
       "fruitEnName": "blueberry",
       "fruitName": "藍莓",
       "neckName": "",
-      "season": "6,7,8",
-      "nutrients": "1,2,3,4",
+      "season": "1,2,3,10,11,12",
+      "nutrients": "1,9,12",
       "info": "具有抗氧化力，可防癌、抗老及調節免疫能力。"
-    },
-    {
-      "fruitEnName": "orange",
-      "fruitName": "椪柑",
-      "neckName": "",
-      "season": "1,9",
-      "nutrients": "1,2,3,4",
-      "info": "維持腸胃舒適，美化肌膚，解熱、祛痰。"
-    }
-  ],
-  "heatOfFood":[
-    {
-      "weight": "15",
-      "kcal": "0.39",
-      "protein": "1",
-      "carbohydrates": "9.3",
-      "fat": "0.2",
-      "dietaryFiber":"1.8",
-      "sugar": "0.6"
-    },
-    {
-      "weight": "260",
-      "kcal": "0.49",
-      "protein": "0.3",
-      "carbohydrates": "13",
-      "fat": "0.2",
-      "dietaryFiber":"1.5",
-      "sugar": "0.5"
-    },
-    {
-      "weight": "125",
-      "kcal": "0.85",
-      "protein": "1.5",
-      "carbohydrates": "22.1",
-      "fat": "0.1",
-      "dietaryFiber":"1.6",
-      "sugar": "0.2"
-    },
-    {
-      "weight": "6",
-      "kcal": "0.57",
-      "protein": "0.7",
-      "carbohydrates": "14",
-      "fat": "0.3",
-      "dietaryFiber":"2.4",
-      "sugar": "0.1"
-    },
-    {
-      "weight": "320",
-      "kcal": "0.4",
-      "protein": "0.8",
-      "carbohydrates": "10",
-      "fat": "0.2",
-      "dietaryFiber":"1.5",
-      "sugar": "0.4"
     }],
-  "nutrients": [
+    "heatOfFood": [
     {
-      "name": "維生素A",
-      "effect": "預防眼睛疾病，促進生長，發育，骨骼及牙齒健康，加強細胞及黏膜的保護和再生，維持呼吸道及腸道健康，維持毛髮，指甲及皮膚的健康",
-      "symptoms": "夜盲症,眼睛乾澀,皮膚乾燥,腸胃不適,生長受阻,骨骼受損,牙齒受損",
-      "excess": "皮膚起鱗片,皮膚乾燥,脫皮,皮膚痕癢,皮膚起紅斑,脫髮,食慾不振,虛弱嘔吐,腸胃不適,肝臟受損,頭痛,骨痛,情緒緊張,暴躁"
+        "weight": "1058",
+        "kcal": "51",
+        "protein": "0.7",
+        "fat": "0.1",
+        "carbohydrates": "13.6",
+        "dietaryFiber": "1.1",
+        "sugar": "11.6"
     },
     {
-      "name": "維生素B1",
-      "effect": "幫助碳水化合物和蛋白質的新陳代謝，令身體從食物中獲得能量，幫助神經系統、心臟、肌肉，消化系統正常運作，促進成長及發育",
-      "symptoms": "腳氣病,精神欠佳,失眠,嘔吐,抑鬱,生長受阻",
-      "excess": "不普遍"
+        "weight": "124.8",
+        "kcal": "82",
+        "protein": "1.5",
+        "fat": "0.1",
+        "carbohydrates": "22.1",
+        "dietaryFiber": "1.6",
+        "sugar": "18"
     },
     {
-      "name": "維生素B2",
-      "effect": "幫助碳水化合物、蛋白質和脂肪的新陳代謝，使身體從食物中獲得能量，保持口腔、口唇、舌頭及眼睛健康，保持皮膚、毛髮及指甲的健康",
-      "symptoms": "口腔發炎,口角發炎,舌頭發炎,舌頭腫痛,眼睛痕癢,眼睛乾澀,眼睛充血,皮膚乾燥,虛弱",
-      "excess": "不普遍"
+        "weight": "316",
+        "kcal": "32",
+        "protein": "0.7",
+        "fat": "0.1",
+        "carbohydrates": "9.6",
+        "dietaryFiber": "3.6",
+        "sugar": "5.2"
     },
     {
-      "name": "維生素B3",
-      "effect": "幫助碳水化合物和脂肪的新陳代謝，令身體從食物中獲得能量，調節膽固醇，維持皮膚、黏膜、舌頭、消化系統的健康",
-      "symptoms": "消化不良,皮膚粗糙,精神欠佳",
-      "excess": "腸胃不適,嘔吐,精神欠佳,頭痛,疲倦"
+        "weight": "244.8",
+        "kcal": "30",
+        "protein": "0.5",
+        "fat": "0.1",
+        "carbohydrates": "8.2",
+        "dietaryFiber": "1.3",
+        "sugar": "6.3"
     },
     {
-      "name": "維生素B5",
-      "effect": "人體必需的維生素之一，動物需要泛酸以合成輔酶A，而輔酶A是動物代謝醣類、蛋白質、脂肪的必要物質",
-      "symptoms": "頭痛,疲倦,運動機能不協調,感覺遲鈍,肌肉痙攣,胃腸障礙",
-      "excess": "不普遍"
+        "weight": "119",
+        "kcal": "96",
+        "protein": "1.4",
+        "fat": "0.3",
+        "carbohydrates": "27.3",
+        "dietaryFiber": "6.1",
+        "sugar": "0"
     },
     {
-      "name": "維生素B6",
-      "effect": "幫助蛋白質的新陳代謝，協助製造紅血球、荷爾蒙、酵素、抗體，協助神經系統的傳導功能",
-      "symptoms": "貧血,神經緊張,失眠,抑鬱,肌肉痙攣",
-      "excess": "手腳麻木,失去部分知覺"
+        "weight": "156",
+        "kcal": "38",
+        "protein": "0.8",
+        "fat": "0.2",
+        "carbohydrates": "10",
+        "dietaryFiber": "1.5",
+        "sugar": "6.8"
     },
     {
-      "name": "維生素B9",
-      "effect": "幫助製造細胞和紅血球，促進生長及生殖功能",
-      "symptoms": "貧血,疲倦,腸胃不適",
-      "excess": "不普遍"
+        "weight": "15",
+        "kcal": "36",
+        "protein": "1",
+        "fat": "0.2",
+        "carbohydrates": "9.3",
+        "dietaryFiber": "1.8",
+        "sugar": "6.1"
     },
     {
-      "name": "維生素B12",
-      "effect": "協助製造紅血球，保持神經系統健康，增進食慾，幫助蛋白質的新陳代謝",
-      "symptoms": "貧血,思考遲緩,情緒混亂,記憶力衰退,知覺減弱",
-      "excess": "不普遍"
+        "weight": "901",
+        "kcal": "130",
+        "protein": "2.6",
+        "fat": "1.6",
+        "carbohydrates": "31.6",
+        "dietaryFiber": "3.8",
+        "sugar": "0"
     },
     {
-      "name": "維生素C",
-      "effect": "幫助製造膠原體，促進細胞、牙床、牙齒、血管、骨骼的成長和修補，幫助手術或創傷後的痊癒，幫助鈣質和鐵質的吸收，加強抵抗力",
-      "symptoms": "壞血病,牙肉發炎,牙肉出血,牙齒脫落,毛細血管爆裂,虛弱,疲倦,骨痛,關節腫痛",
-      "excess": "腹痛,腹瀉,腎結石"
+        "weight": "173",
+        "kcal": "49",
+        "protein": "0.2",
+        "fat": "0.1",
+        "carbohydrates": "13.9",
+        "dietaryFiber": "1.3",
+        "sugar": "11.1"
     },
     {
-      "name": "維生素D",
-      "effect": "協助身體吸收和利用鈣質和磷質，以幫助牙齒和骨骼生長及腦部健康，保持血中鈣質平衡",
-      "symptoms": "抑鬱,疲勞,骨質疏鬆,肌肉無力",
-      "excess": "軟骨鈣化,腎臟受損,心跳不正常,嘔吐,腹瀉,眼睛疲倦,皮膚痕癢"
+        "weight": "338",
+        "kcal": "66",
+        "protein": "1.5",
+        "fat": "4.8",
+        "carbohydrates": "7.5",
+        "dietaryFiber": "3.8",
+        "sugar": "0.6"
     },
     {
-      "name": "維生素E",
-      "effect": "維持細胞正常，保持皮膚及各組織的健康，保護紅血球，抗氧化功能，加強抵抗力",
-      "symptoms": "貧血,虛弱",
-      "excess": "甲狀腺素降低,頭痛,頭暈,疲倦,腸胃不適,食慾不振"
+        "weight": "8",
+        "kcal": "73",
+        "protein": "1.2",
+        "fat": "0.3",
+        "carbohydrates": "19.1",
+        "dietaryFiber": "1.3",
+        "sugar": "0"
     },
     {
-      "name": "維生素K",
-      "effect": "幫助血液凝固，防止流血過多，維持肝臟健康",
-      "symptoms": "凝血降低,失血",
-      "excess": "肝臟受損"
-    }
-  ]
+        "weight": "6",
+        "kcal": "63",
+        "protein": "0.5",
+        "fat": "0.3",
+        "carbohydrates": "16.6",
+        "dietaryFiber": "0.2",
+        "sugar": "15.6"
+    },
+    {
+        "weight": "333",
+        "kcal": "36",
+        "protein": "0.7",
+        "fat": "0.2",
+        "carbohydrates": "9.2",
+        "dietaryFiber": "1.1",
+        "sugar": "0"
+    },
+    {
+        "weight": "699.2",
+        "kcal": "36",
+        "protein": "0.9",
+        "fat": "0",
+        "carbohydrates": "9.3",
+        "dietaryFiber": "0.6",
+        "sugar": "7.7"
+    },
+    {
+        "weight": "88",
+        "kcal": "52",
+        "protein": "1.1",
+        "fat": "0.3",
+        "carbohydrates": "14",
+        "dietaryFiber": "2.7",
+        "sugar": "9.3"
+    },
+    {
+        "weight": "92",
+        "kcal": "31",
+        "protein": "0.7",
+        "fat": "0.5",
+        "carbohydrates": "7.4",
+        "dietaryFiber": "1.2",
+        "sugar": "0.9"
+    },
+    {
+        "weight": "7",
+        "kcal": "70",
+        "protein": "1.1",
+        "fat": "0.5",
+        "carbohydrates": "17.9",
+        "dietaryFiber": "1.8",
+        "sugar": "0"
+    },
+    {
+        "weight": "16",
+        "kcal": "36",
+        "protein": "0.3",
+        "fat": "0.2",
+        "carbohydrates": "9.8",
+        "dietaryFiber": "0.9",
+        "sugar": "8"
+    },
+    {
+        "weight": "16.5",
+        "kcal": "64",
+        "protein": "1",
+        "fat": "0.2",
+        "carbohydrates": "16.5",
+        "dietaryFiber": "0.8",
+        "sugar": "14.1"
+    },
+    {
+        "weight": "108.3",
+        "kcal": "42",
+        "protein": "0.8",
+        "fat": "0.2",
+        "carbohydrates": "11.4",
+        "dietaryFiber": "2",
+        "sugar": "9.6"
+    },
+    {
+        "weight": "694",
+        "kcal": "48",
+        "protein": "0.6",
+        "fat": "0.2",
+        "carbohydrates": "13",
+        "dietaryFiber": "1.2",
+        "sugar": "9.8"
+    },
+    {
+        "weight": "25",
+        "kcal": "67",
+        "protein": "0.6",
+        "fat": "0.3",
+        "carbohydrates": "18.1",
+        "dietaryFiber": "1.6",
+        "sugar": "0"
+    },
+    {
+        "weight": "1054",
+        "kcal": "36",
+        "protein": "1",
+        "fat": "0.2",
+        "carbohydrates": "8.9",
+        "dietaryFiber": "0.5",
+        "sugar": "8.5"
+    },
+    {
+        "weight": "3",
+        "kcal": "30",
+        "protein": "1.1",
+        "fat": "0.4",
+        "carbohydrates": "7",
+        "dietaryFiber": "1.3",
+        "sugar": "3.8"
+    },
+    {
+        "weight": "134",
+        "kcal": "42",
+        "protein": "0.6",
+        "fat": "0.1",
+        "carbohydrates": "11.5",
+        "dietaryFiber": "1.3",
+        "sugar": "9.5"
+    },
+    {
+        "weight": "803.5",
+        "kcal": "36",
+        "protein": "0.6",
+        "fat": "0.1",
+        "carbohydrates": "9.9",
+        "dietaryFiber": "1.4",
+        "sugar": "6.2"
+    },
+    {
+        "weight": "80",
+        "kcal": "58",
+        "protein": "2.2",
+        "fat": "2.4",
+        "carbohydrates": "10.7",
+        "dietaryFiber": "5.3",
+        "sugar": "0"
+    },
+    {
+        "weight": "90",
+        "kcal": "37",
+        "protein": "0.9",
+        "fat": "0.2",
+        "carbohydrates": "9.7",
+        "dietaryFiber": "1.7",
+        "sugar": "6.4"
+    },
+    {
+        "weight": "467",
+        "kcal": "40",
+        "protein": "0.3",
+        "fat": "0.1",
+        "carbohydrates": "11.1",
+        "dietaryFiber": "1.1",
+        "sugar": "7.2"
+    },
+    {
+        "weight": "242",
+        "kcal": "55",
+        "protein": "0.5",
+        "fat": "0.1",
+        "carbohydrates": "15.2",
+        "dietaryFiber": "1.2",
+        "sugar": "13"
+    },
+    {
+        "weight": "409",
+        "kcal": "49",
+        "protein": "0.9",
+        "fat": "0.4",
+        "carbohydrates": "12.4",
+        "dietaryFiber": "1.7",
+        "sugar": "8.9"
+    },
+    {
+        "weight": "26.5",
+        "kcal": "45",
+        "protein": "0.7",
+        "fat": "0.3",
+        "carbohydrates": "11.9",
+        "dietaryFiber": "1.5",
+        "sugar": "5.4"
+    },
+    {
+        "weight": "255",
+        "kcal": "60",
+        "protein": "1.7",
+        "fat": "0.1",
+        "carbohydrates": "16.8",
+        "dietaryFiber": "4.6",
+        "sugar": "0"
+    },
+    {
+        "weight": "363",
+        "kcal": "31",
+        "protein": "0.7",
+        "fat": "0.1",
+        "carbohydrates": "8.4",
+        "dietaryFiber": "1.3",
+        "sugar": "0"
+    },
+    {
+        "weight": "350",
+        "kcal": "99",
+        "protein": "2.2",
+        "fat": "0.1",
+        "carbohydrates": "26.6",
+        "dietaryFiber": "2.7",
+        "sugar": "0"
+    },
+    {
+        "weight": "106",
+        "kcal": "43",
+        "protein": "0.8",
+        "fat": "0",
+        "carbohydrates": "11.8",
+        "dietaryFiber": "1.4",
+        "sugar": "0"
+    },
+    {
+        "weight": "2311",
+        "kcal": "32",
+        "protein": "0.8",
+        "fat": "0.1",
+        "carbohydrates": "8",
+        "dietaryFiber": "0.3",
+        "sugar": "7.5"
+    },
+    {
+        "weight": "115.7",
+        "kcal": "34",
+        "protein": "0.4",
+        "fat": "0.2",
+        "carbohydrates": "9",
+        "dietaryFiber": "0.8",
+        "sugar": "5.8"
+    },
+    {
+        "weight": "10",
+        "kcal": "31",
+        "protein": "0.5",
+        "fat": "0.1",
+        "carbohydrates": "8.8",
+        "dietaryFiber": "2",
+        "sugar": "0.8"
+    },
+    {
+        "weight": "3",
+        "kcal": "57",
+        "protein": "0.7",
+        "fat": "0.3",
+        "carbohydrates": "14",
+        "dietaryFiber": "2.4",
+        "sugar": "10"
+    }],
+    "nutrients": [
+    {
+        "name": "維生素A",
+        "effect": "預防眼睛疾病，促進生長，發育，骨骼及牙齒健康，加強細胞及黏膜的保護和再生，維持呼吸道及腸道健康，維持毛髮，指甲及皮膚的健康",
+        "symptoms": "夜盲症,眼睛乾澀,皮膚乾燥,腸胃不適,生長受阻,骨骼受損,牙齒受損",
+        "excess": "皮膚起鱗片,皮膚乾燥,脫皮,皮膚痕癢,皮膚起紅斑,脫髮,食慾不振,虛弱嘔吐,腸胃不適,肝臟受損,頭痛,骨痛,情緒緊張,暴躁"
+    },
+    {
+        "name": "維生素D",
+        "effect": "協助身體吸收和利用鈣質和磷質，以幫助牙齒和骨骼生長及腦部健康，保持血中鈣質平衡",
+        "symptoms": "抑鬱,疲勞,骨質疏鬆,肌肉無力",
+        "excess": "軟骨鈣化,腎臟受損,心跳不正常,嘔吐,腹瀉,眼睛疲倦,皮膚痕癢"
+    },
+    {
+        "name": "維生素E",
+        "effect": "維持細胞正常，保持皮膚及各組織的健康，保護紅血球，抗氧化功能，加強抵抗力",
+        "symptoms": "貧血,虛弱",
+        "excess": "甲狀腺素降低,頭痛,頭暈,疲倦,腸胃不適,食慾不振"
+    },
+    {
+        "name": "維生素K",
+        "effect": "幫助血液凝固，防止流血過多，維持肝臟健康",
+        "symptoms": "凝血降低,失血",
+        "excess": "肝臟受損"
+    },
+    {
+        "name": "維生素B1",
+        "effect": "幫助碳水化合物和蛋白質的新陳代謝，令身體從食物中獲得能量，幫助神經系統、心臟、肌肉，消化系統正常運作，促進成長及發育",
+        "symptoms": "腳氣病,精神欠佳,失眠,嘔吐,抑鬱,生長受阻",
+        "excess": "不普遍"
+    },
+    {
+        "name": "維生素B2",
+        "effect": "幫助碳水化合物、蛋白質和脂肪的新陳代謝，使身體從食物中獲得能量，保持口腔、口唇、舌頭及眼睛健康，保持皮膚、毛髮及指甲的健康",
+        "symptoms": "口腔發炎,口角發炎,舌頭發炎,舌頭腫痛,眼睛痕癢,眼睛乾澀,眼睛充血,皮膚乾燥,虛弱",
+        "excess": "不普遍"
+    },
+    {
+        "name": "維生素B3",
+        "effect": "幫助碳水化合物和脂肪的新陳代謝，令身體從食物中獲得能量，調節膽固醇，維持皮膚、黏膜、舌頭、消化系統的健康",
+        "symptoms": "消化不良,皮膚粗糙,精神欠佳",
+        "excess": "腸胃不適,嘔吐,精神欠佳,頭痛,疲倦"
+    },
+    {
+        "name": "維生素B5",
+        "effect": "人體必需的維生素之一，動物需要泛酸以合成輔酶A，而輔酶A是動物代謝醣類、蛋白質、脂肪的必要物質",
+        "symptoms": "頭痛,疲倦,運動機能不協調,感覺遲鈍,肌肉痙攣,胃腸障礙",
+        "excess": "不普遍"
+    },
+    {
+        "name": "維生素B6",
+        "effect": "幫助蛋白質的新陳代謝，協助製造紅血球、荷爾蒙、酵素、抗體，協助神經系統的傳導功能",
+        "symptoms": "貧血,神經緊張,失眠,抑鬱,肌肉痙攣",
+        "excess": "手腳麻木,失去部分知覺"
+    },
+    {
+        "name": "維生素B9",
+        "effect": "幫助製造細胞和紅血球，促進生長及生殖功能",
+        "symptoms": "貧血,疲倦,腸胃不適",
+        "excess": "不普遍"
+    },
+    {
+        "name": "維生素B12",
+        "effect": "協助製造紅血球，保持神經系統健康，增進食慾，幫助蛋白質的新陳代謝",
+        "symptoms": "貧血,思考遲緩,情緒混亂,記憶力衰退,知覺減弱",
+        "excess": "不普遍"
+    },
+    {
+        "name": "維生素C",
+        "effect": "幫助製造膠原體，促進細胞、牙床、牙齒、血管、骨骼的成長和修補，幫助手術或創傷後的痊癒，幫助鈣質和鐵質的吸收，加強抵抗力",
+        "symptoms": "壞血病,牙肉發炎,牙肉出血,牙齒脫落,毛細血管爆裂,虛弱,疲倦,骨痛,關節腫痛",
+        "excess": "腹痛,腹瀉,腎結石"
+    }],
+    "situation": [
+    {
+        "name":"運動前",
+        "fruits":"葡萄柚,香蕉,奇異果,芭樂,蘋果"
+    },
+    {
+        "name":"運動後",
+        "fruits":"香蕉,西瓜,柳丁,火龍果,奇異果,芭樂,蘋果"
+    },
+    {
+        "name":"月經",
+        "fruits":"百香果,蘋果,蓮霧,木瓜,鳳梨,藍莓,火龍果,葡萄"
+    }]
 }
