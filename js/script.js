@@ -451,7 +451,7 @@ function getChartPie(obj) {
     carbohydrates = ((parseFloat(obj.carbohydrates) / sum) * 100).toFixed(0);
 
     var gradient = new ConicGradient({
-        stops: '#5DB5A4 0% ' + protein + '%, #F57A82 ' + protein + '% ' + (protein + fat) + '% , #F4CDA5 ' + (protein + fat) + '% 100%',
+        stops: '#3C989E 0% ' + protein + '%, #F57A82 ' + protein + '% ' + (protein + fat) + '% , #F4CDA5 ' + (protein + fat) + '% 100%',
         repeating: true,
         size: 400
     });
